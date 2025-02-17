@@ -15,7 +15,7 @@ num_classes = 5
 model.fc = nn.Linear(model.fc.in_features, num_classes)
 
 # Загрузка весов модели
-model.load_state_dict(torch.load('last_model.pth'))
+model.load_state_dict(torch.load('best_model.pth'))
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 model.eval()

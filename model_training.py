@@ -51,9 +51,6 @@ val_transforms = transforms.Compose([
 dataset_dir = "dataset/train"
 dataset = ImageFolder(dataset_dir, transform=train_transforms)
 
-print(dataset.classes)
-exit()
-
 # Разделяем фото в dataset на train и validate
 train_size = int(0.8 * len(dataset))  # 80% - обучение
 validate_size = len(dataset) - train_size  # 20% - валидация
